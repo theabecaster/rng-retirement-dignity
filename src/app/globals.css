@@ -1,18 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-navy: #1B2B4B;
+  --color-navy-dark: #111D33;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E8C86A;
+  --color-cream: #F9F7F4;
+  --color-slate: #6B7280;
+  --color-slate-light: #9CA3AF;
+
+  /* Fonts — reference the next/font injected CSS vars */
+  --font-inter: var(--font-inter-var), system-ui, sans-serif;
+  --font-playfair: var(--font-playfair-var), Georgia, serif;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #F9F7F4;
-  color: #1B2B4B;
-}
-
-@layer base {
-  * {
-    box-sizing: border-box;
-  }
+  background-color: var(--color-cream);
+  color: var(--color-navy);
 }
