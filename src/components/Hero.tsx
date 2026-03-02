@@ -6,70 +6,111 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen flex items-end overflow-hidden pb-28 lg:pb-36"
       style={{
         background:
-          "linear-gradient(135deg, #1B2B4B 0%, #111D33 50%, #1E3050 100%)",
+          "linear-gradient(160deg, #1C3829 0%, #0F2319 40%, #1A3526 70%, #0F2319 100%)",
       }}
     >
-      {/* Subtle background pattern */}
+      {/* Subtle diagonal lines pattern */}
       <div
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 25% 25%, #C9A84C 0%, transparent 50%), radial-gradient(circle at 75% 75%, #C9A84C 0%, transparent 50%)",
+            "repeating-linear-gradient(45deg, transparent, transparent 40px, #F4EDE4 40px, #F4EDE4 41px)",
         }}
       />
 
-      {/* Decorative horizontal line */}
-      <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      {/* Warm radial glow */}
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "radial-gradient(ellipse 60% 50% at 70% 60%, #B8704B, transparent)",
+        }}
+      />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
+        {/* Section number — decorative */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="font-outfit text-[11px] text-copper/60 tracking-[0.3em] uppercase mb-8"
         >
-          {/* Eyebrow */}
-          <p className="text-gold/80 text-sm font-inter font-medium tracking-widest uppercase mb-6">
-            Education · Clarity · Dignity
-          </p>
+          01 — Welcome
+        </motion.p>
 
-          {/* Headline */}
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Understanding Your Future
+        {/* Main Headline */}
+        <div className="max-w-5xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="font-newsreader text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.05] text-white font-normal tracking-tight"
+          >
+            Understanding
             <br />
-            <span className="text-gold">Shouldn&apos;t Be</span> Complicated
-          </h1>
+            Your Future{" "}
+            <em className="text-copper-light not-italic font-light">
+              Shouldn&apos;t
+            </em>
+            <br />
+            Be Complicated
+          </motion.h1>
+        </div>
 
-          {/* Subheadline */}
-          <p className="font-inter text-lg md:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed mb-10">
+        {/* Copper rule */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1.2, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full max-w-md h-px bg-copper/40 origin-left my-10"
+        />
+
+        {/* Subtext */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="font-outfit text-base lg:text-lg text-white/55 max-w-lg leading-relaxed"
+          >
             We help individuals, families, and public servants navigate life
             insurance, retirement income, Medicare, and long-term planning —
             with clarity, not pressure.
-          </p>
+          </motion.p>
 
-          {/* CTA */}
           <motion.a
-            href="#mission"
-            className="inline-block bg-gold hover:bg-gold-light text-navy font-inter font-semibold px-8 py-4 rounded-sm text-sm tracking-wide transition-all duration-200 hover:shadow-lg hover:shadow-gold/20"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            href="#philosophy"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
+            className="group flex items-center gap-3 text-copper-light/70 hover:text-copper-light transition-colors duration-300"
           >
-            Start Learning
+            <span className="font-outfit text-[13px] tracking-wide uppercase">
+              Explore Below
+            </span>
+            <svg
+              className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
           </motion.a>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-        >
-          <div className="w-px h-16 bg-gradient-to-b from-white/30 to-transparent mx-auto" />
-        </motion.div>
+        </div>
       </div>
+
+      {/* Bottom edge gradient */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-parchment to-transparent" />
     </section>
   );
 }

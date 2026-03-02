@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Newsreader, Outfit } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-inter-var",
+  variable: "--font-newsreader-var",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-playfair-var",
+  variable: "--font-outfit-var",
   display: "swap",
 });
 
@@ -31,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-inter antialiased">{children}</body>
+    <html lang="en" className={`${newsreader.variable} ${outfit.variable}`}>
+      <body className="font-outfit antialiased">{children}</body>
     </html>
   );
 }

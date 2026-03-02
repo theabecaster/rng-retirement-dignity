@@ -31,47 +31,50 @@ const faqs = [
   },
 ];
 
-function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
+function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
+  const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 25 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="border-b border-navy/10 last:border-0"
+      transition={{
+        duration: 0.6,
+        delay: index * 0.08,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="border-b border-forest/8 last:border-0"
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full text-left py-6 flex items-start justify-between gap-4 group"
+        className="w-full text-left py-7 flex items-start justify-between gap-6 group cursor-pointer"
         aria-expanded={open}
       >
-        <span className="font-playfair text-lg font-semibold text-navy group-hover:text-gold transition-colors duration-200">
-          &ldquo;{faq.question}&rdquo;
-        </span>
-        <span
-          className={`flex-shrink-0 w-6 h-6 rounded-full border border-navy/20 flex items-center justify-center transition-all duration-200 mt-0.5 ${
-            open ? "bg-gold border-gold" : "group-hover:border-gold/50"
-          }`}
-        >
-          <svg
-            className={`w-3 h-3 transition-transform duration-200 ${
-              open ? "rotate-180 text-navy" : "text-slate"
+        <div className="flex items-start gap-5">
+          {/* Number */}
+          <span className="font-outfit text-[11px] text-copper/60 tracking-wider mt-1.5 flex-shrink-0">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+
+          {/* Question */}
+          <span className="font-newsreader text-lg lg:text-xl text-forest group-hover:text-copper transition-colors duration-300 italic leading-snug">
+            &ldquo;{faq.question}&rdquo;
+          </span>
+        </div>
+
+        {/* Toggle indicator */}
+        <span className="flex-shrink-0 mt-1.5 w-5 h-5 flex items-center justify-center">
+          <span
+            className={`block w-3 h-px bg-copper transition-all duration-300`}
+          />
+          <span
+            className={`absolute block w-px h-3 bg-copper transition-all duration-300 ${
+              open ? "rotate-90 opacity-0" : ""
             }`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2.5}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
+          />
         </span>
       </button>
 
@@ -81,12 +84,15 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 font-inter text-slate leading-relaxed text-sm pr-10">
-              {faq.answer}
-            </p>
+            <div className="pb-8 pl-10 lg:pl-12 pr-8">
+              <div className="w-6 h-px bg-copper/30 mb-5" />
+              <p className="font-outfit text-[15px] text-stone leading-[1.75] max-w-2xl">
+                {faq.answer}
+              </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -96,32 +102,43 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
 
 export default function FAQ() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="faq" className="py-24 bg-cream">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="faq" className="py-28 lg:py-36 bg-parchment">
+      <div className="max-w-4xl mx-auto px-6 lg:px-10">
+        {/* Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-16"
         >
-          <p className="text-gold text-sm font-inter font-medium tracking-widest uppercase mb-4">
-            Common Questions
+          <p className="font-outfit text-[11px] text-copper tracking-[0.3em] uppercase font-medium mb-5">
+            04 — Common Questions
           </p>
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-navy mb-4">
-            What Most People Aren&apos;t Told
+          <h2 className="font-newsreader text-4xl lg:text-5xl text-forest leading-tight mb-5">
+            What Most People
+            <br />
+            <em className="text-copper">Aren&apos;t Told</em>
           </h2>
-          <p className="font-inter text-slate max-w-xl mx-auto text-base leading-relaxed">
+          <p className="font-outfit text-base text-stone leading-relaxed max-w-xl">
             These are some of the most common misconceptions we encounter — and
             the fuller picture behind them.
           </p>
-          <div className="w-16 h-0.5 bg-gold mx-auto mt-6" />
         </motion.div>
 
-        <div className="bg-white rounded-sm shadow-sm border border-gray-100 px-8">
+        {/* Divider */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={inView ? { scaleX: 1 } : {}}
+          transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full h-px bg-forest/10 origin-left mb-2"
+        />
+
+        {/* FAQ Items */}
+        <div>
           {faqs.map((faq, i) => (
             <FAQItem key={i} faq={faq} index={i} />
           ))}
