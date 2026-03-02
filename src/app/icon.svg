@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#1C3829"/>
+  <text x="256" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="180" font-weight="700" fill="#F4EDE4">R</text>
+  <rect x="136" y="280" width="240" height="2" fill="#B8704B" opacity="0.6"/>
+  <text x="256" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="60" font-weight="500" fill="#B8704B" letter-spacing="16">RNG</text>
+  <text x="256" y="430" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" font-weight="400" fill="#7D9B82" letter-spacing="8">DIGNITY</text>
+</svg>
