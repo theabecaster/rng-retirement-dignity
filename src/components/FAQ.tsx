@@ -46,7 +46,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
         delay: index * 0.08,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="border-b border-forest/8 last:border-0"
+      className="border-b border-navy/8 last:border-0"
     >
       <button
         onClick={() => setOpen(!open)}
@@ -55,12 +55,12 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
       >
         <div className="flex items-start gap-5">
           {/* Number */}
-          <span className="font-outfit text-[11px] text-copper/60 tracking-wider mt-1.5 flex-shrink-0">
+          <span className="font-sora text-[11px] text-gold/60 tracking-wider mt-1.5 flex-shrink-0">
             {String(index + 1).padStart(2, "0")}
           </span>
 
           {/* Question */}
-          <span className="font-newsreader text-lg lg:text-xl text-forest group-hover:text-copper transition-colors duration-300 italic leading-snug">
+          <span className="font-cormorant text-lg lg:text-xl text-navy group-hover:text-gold transition-colors duration-300 italic leading-snug">
             &ldquo;{faq.question}&rdquo;
           </span>
         </div>
@@ -68,10 +68,10 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
         {/* Toggle indicator */}
         <span className="flex-shrink-0 mt-1.5 w-5 h-5 flex items-center justify-center">
           <span
-            className={`block w-3 h-px bg-copper transition-all duration-300`}
+            className={`block w-3 h-px bg-gold transition-all duration-300`}
           />
           <span
-            className={`absolute block w-px h-3 bg-copper transition-all duration-300 ${
+            className={`absolute block w-px h-3 bg-gold transition-all duration-300 ${
               open ? "rotate-90 opacity-0" : ""
             }`}
           />
@@ -88,8 +88,8 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
             className="overflow-hidden"
           >
             <div className="pb-8 pl-10 lg:pl-12 pr-8">
-              <div className="w-6 h-px bg-copper/30 mb-5" />
-              <p className="font-outfit text-[15px] text-stone leading-[1.75] max-w-2xl">
+              <div className="w-6 h-px bg-gold/30 mb-5" />
+              <p className="font-sora text-[15px] text-slate leading-[1.75] max-w-2xl">
                 {faq.answer}
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function FAQ() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="faq" className="py-28 lg:py-36 bg-parchment">
+    <section id="faq" className="py-28 lg:py-36 bg-ivory">
       <div className="max-w-4xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <motion.div
@@ -115,15 +115,15 @@ export default function FAQ() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16"
         >
-          <p className="font-outfit text-[11px] text-copper tracking-[0.3em] uppercase font-medium mb-5">
+          <p className="font-sora text-[11px] text-gold tracking-[0.3em] uppercase font-medium mb-5">
             04 — Common Questions
           </p>
-          <h2 className="font-newsreader text-4xl lg:text-5xl text-forest leading-tight mb-5">
+          <h2 className="font-cormorant text-4xl lg:text-5xl text-navy leading-tight mb-5">
             What Most People
             <br />
-            <em className="text-copper">Aren&apos;t Told</em>
+            <em className="text-gold">Aren&apos;t Told</em>
           </h2>
-          <p className="font-outfit text-base text-stone leading-relaxed max-w-xl">
+          <p className="font-sora text-base text-slate leading-relaxed max-w-xl">
             These are some of the most common misconceptions we encounter — and
             the fuller picture behind them.
           </p>
@@ -134,7 +134,7 @@ export default function FAQ() {
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full h-px bg-forest/10 origin-left mb-2"
+          className="w-full h-px bg-navy/10 origin-left mb-2"
         />
 
         {/* FAQ Items */}

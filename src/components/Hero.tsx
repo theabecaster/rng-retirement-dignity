@@ -9,35 +9,35 @@ export default function Hero() {
       className="relative h-screen flex items-end overflow-hidden pb-28 lg:pb-36"
       style={{
         background:
-          "linear-gradient(160deg, #1C3829 0%, #0F2319 40%, #1A3526 70%, #0F2319 100%)",
+          "linear-gradient(160deg, #0C1F3F 0%, #071428 40%, #0F2545 70%, #071428 100%)",
       }}
     >
-      {/* Subtle diagonal lines pattern */}
+      {/* Geometric diamond pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(45deg, transparent, transparent 40px, #F4EDE4 40px, #F4EDE4 41px)",
+            "repeating-linear-gradient(45deg, transparent, transparent 60px, #C9A84C 60px, #C9A84C 61px), repeating-linear-gradient(-45deg, transparent, transparent 60px, #C9A84C 60px, #C9A84C 61px)",
         }}
       />
 
-      {/* Warm radial glow */}
+      {/* Warm gold radial glow */}
       <div
-        className="absolute inset-0 opacity-[0.07]"
+        className="absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 60% 50% at 70% 60%, #B8704B, transparent)",
+            "radial-gradient(ellipse 50% 40% at 75% 65%, #C9A84C, transparent)",
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
-        {/* Section number — decorative */}
+        {/* Section number */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="font-outfit text-[11px] text-copper/60 tracking-[0.3em] uppercase mb-8"
+          className="font-sora text-[11px] text-gold/60 tracking-[0.3em] uppercase mb-8"
         >
           01 — Welcome
         </motion.p>
@@ -48,12 +48,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-newsreader text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.05] text-white font-normal tracking-tight"
+            className="font-cormorant text-[clamp(2.5rem,7vw,5.5rem)] leading-[1.05] text-white font-normal tracking-tight"
           >
             Understanding
             <br />
             Your Future{" "}
-            <em className="text-copper-light not-italic font-light">
+            <em className="text-gold-light not-italic font-light">
               Shouldn&apos;t
             </em>
             <br />
@@ -61,12 +61,12 @@ export default function Hero() {
           </motion.h1>
         </div>
 
-        {/* Copper rule */}
+        {/* Gold rule */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.2, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full max-w-md h-px bg-copper/40 origin-left my-10"
+          className="w-full max-w-md h-px bg-gold/40 origin-left my-10"
         />
 
         {/* Subtext */}
@@ -75,7 +75,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="font-outfit text-base lg:text-lg text-white/55 max-w-lg leading-relaxed"
+            className="font-sora text-base lg:text-lg text-white/50 max-w-lg leading-relaxed"
           >
             We help individuals, families, and public servants navigate life
             insurance, retirement income, Medicare, and long-term planning —
@@ -87,9 +87,9 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.1 }}
-            className="group flex items-center gap-3 text-copper-light/70 hover:text-copper-light transition-colors duration-300"
+            className="group flex items-center gap-3 text-gold-light/70 hover:text-gold-light transition-colors duration-300"
           >
-            <span className="font-outfit text-[13px] tracking-wide uppercase">
+            <span className="font-sora text-[13px] tracking-wide uppercase">
               Explore Below
             </span>
             <svg
@@ -110,7 +110,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom edge gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-parchment to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-ivory to-transparent" />
     </section>
   );
 }

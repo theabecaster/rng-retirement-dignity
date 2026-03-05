@@ -13,7 +13,7 @@ export default function About() {
       className="py-28 lg:py-36 relative overflow-hidden"
       style={{
         background:
-          "linear-gradient(170deg, #1C3829 0%, #0F2319 100%)",
+          "linear-gradient(170deg, #0C1F3F 0%, #071428 100%)",
       }}
     >
       {/* Subtle warm glow */}
@@ -21,7 +21,7 @@ export default function About() {
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 40% 60% at 20% 50%, #B8704B, transparent)",
+            "radial-gradient(ellipse 40% 60% at 20% 50%, #C9A84C, transparent)",
         }}
       />
 
@@ -37,27 +37,27 @@ export default function About() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5 lg:sticky lg:top-32"
           >
-            <p className="font-outfit text-[11px] text-copper tracking-[0.3em] uppercase font-medium mb-10">
+            <p className="font-sora text-[11px] text-gold tracking-[0.3em] uppercase font-medium mb-10">
               05 — About
             </p>
 
             {/* Quote block */}
             <div className="relative">
               {/* Decorative corner marks */}
-              <div className="absolute -top-4 -left-4 w-6 h-6 border-t border-l border-copper/30" />
-              <div className="absolute -bottom-4 -right-4 w-6 h-6 border-b border-r border-copper/30" />
+              <div className="absolute -top-4 -left-4 w-6 h-6 border-t border-l border-gold/30" />
+              <div className="absolute -bottom-4 -right-4 w-6 h-6 border-b border-r border-gold/30" />
 
               <blockquote className="py-4 px-2">
-                <p className="font-newsreader text-3xl lg:text-4xl text-copper-light italic leading-snug mb-8">
+                <p className="font-cormorant text-3xl lg:text-4xl text-gold-light italic leading-snug mb-8">
                   &ldquo;Trust, education, and credibility come first.&rdquo;
                 </p>
                 <footer>
-                  <div className="w-8 h-px bg-copper/40 mb-4" />
-                  <p className="font-outfit text-sm text-white/45 tracking-wide">
+                  <div className="w-8 h-px bg-gold/40 mb-4" />
+                  <p className="font-sora text-sm text-white/45 tracking-wide">
                     Roberto N. Garcia
                   </p>
-                  <p className="font-outfit text-xs text-white/25 tracking-wide mt-1">
-                    Founder, RNG Retirement Dignity
+                  <p className="font-sora text-xs text-white/25 tracking-wide mt-1">
+                    Founder, Retirement Dignity Group
                   </p>
                 </footer>
               </blockquote>
@@ -75,13 +75,13 @@ export default function About() {
             }}
             className="lg:col-span-7"
           >
-            <h2 className="font-newsreader text-4xl lg:text-5xl text-white leading-tight mb-10">
+            <h2 className="font-cormorant text-4xl lg:text-5xl text-white leading-tight mb-10">
               Meet Roberto
               <br />
               N. Garcia
             </h2>
 
-            <div className="space-y-5 font-outfit text-[15px] text-white/55 leading-[1.8] max-w-lg">
+            <div className="space-y-5 font-sora text-[15px] text-white/55 leading-[1.8] max-w-lg">
               <p>
                 Roberto N. Garcia is a licensed insurance professional and
                 retirement planning educator serving individuals, families, and
@@ -93,7 +93,7 @@ export default function About() {
                 their long-term picture — before they ever make a decision.
               </p>
               <p>
-                RNG Retirement Dignity is built on the belief that education and
+                Retirement Dignity Group is built on the belief that education and
                 trust come first. When people truly understand their options,
                 they make better decisions. That&apos;s the whole point.
               </p>
@@ -102,9 +102,9 @@ export default function About() {
             {/* Credential */}
             <div className="mt-10 pt-8 border-t border-white/8">
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-copper/15 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gold/15 flex items-center justify-center flex-shrink-0">
                   <svg
-                    className="w-5 h-5 text-copper"
+                    className="w-5 h-5 text-gold"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -118,10 +118,10 @@ export default function About() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-outfit text-sm text-white/70 font-medium">
+                  <p className="font-sora text-sm text-white/70 font-medium">
                     Licensed Insurance Professional
                   </p>
-                  <p className="font-outfit text-xs text-white/35 mt-0.5">
+                  <p className="font-sora text-xs text-white/35 mt-0.5">
                     RNG Insurance Group
                   </p>
                 </div>

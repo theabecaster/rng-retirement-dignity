@@ -1,21 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Newsreader, Outfit } from "next/font/google";
+import { Cormorant, Sora } from "next/font/google";
 import "./globals.css";
 
-const newsreader = Newsreader({
+const cormorant = Cormorant({
   subsets: ["latin"],
-  variable: "--font-newsreader-var",
+  variable: "--font-cormorant-var",
   display: "swap",
 });
 
-const outfit = Outfit({
+const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-outfit-var",
+  variable: "--font-sora-var",
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#1C3829",
+  themeColor: "#0C1F3F",
   width: "device-width",
   initialScale: 1,
 };
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://rngretirementdignity.com"
   ),
-  title: "RNG Retirement Dignity | Education. Clarity. Dignity.",
+  title: "Retirement Dignity Group | Education. Clarity. Dignity.",
   description:
-    "RNG Retirement Dignity helps individuals, families, and public servants navigate life insurance, retirement income, Medicare, and long-term planning — with clarity, not pressure.",
-  applicationName: "RNG Retirement Dignity",
+    "Retirement Dignity Group helps individuals, families, and public servants navigate life insurance, retirement income, Medicare, and long-term planning — with clarity, not pressure.",
+  applicationName: "Retirement Dignity Group",
   authors: [{ name: "Roberto N. Garcia" }],
   keywords: [
     "retirement planning",
@@ -38,26 +38,27 @@ export const metadata: Metadata = {
     "retirement income",
     "long-term care",
     "financial education",
-    "RNG Retirement Dignity",
+    "Retirement Dignity Group",
+    "RNG Insurance Group",
     "Roberto Garcia",
   ],
   openGraph: {
-    title: "RNG Retirement Dignity",
+    title: "Retirement Dignity Group",
     description:
       "Education-first retirement and insurance planning for individuals, families, and public servants — with clarity, not pressure.",
     type: "website",
     locale: "en_US",
-    siteName: "RNG Retirement Dignity",
+    siteName: "Retirement Dignity Group",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RNG Retirement Dignity",
+    title: "Retirement Dignity Group",
     description:
       "Education-first retirement and insurance planning — with clarity, not pressure.",
   },
   appleWebApp: {
     capable: true,
-    title: "RNG Dignity",
+    title: "RDG",
     statusBarStyle: "black-translucent",
   },
   other: {
@@ -71,8 +72,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${outfit.variable}`}>
-      <body className="font-outfit antialiased">{children}</body>
+    <html lang="en" className={`${cormorant.variable} ${sora.variable}`}>
+      <body className="font-sora antialiased">{children}</body>
     </html>
   );
 }

@@ -17,42 +17,31 @@ export default function AppleIcon() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#1C3829",
+          backgroundColor: "#0C1F3F",
           borderRadius: 36,
         }}
       >
         <span
           style={{
-            fontSize: 80,
+            fontSize: 64,
             fontWeight: 700,
-            color: "#F4EDE4",
+            color: "#FFFFFF",
             fontFamily: "Georgia, serif",
             lineHeight: 1,
+            letterSpacing: -2,
           }}
         >
-          R
+          RDG
         </span>
         <div
           style={{
-            width: 60,
+            width: 50,
             height: 2,
-            backgroundColor: "#B8704B",
-            marginTop: 4,
-            marginBottom: 6,
+            backgroundColor: "#C9A84C",
+            marginTop: 6,
             opacity: 0.7,
           }}
         />
-        <span
-          style={{
-            fontSize: 18,
-            fontWeight: 600,
-            color: "#B8704B",
-            letterSpacing: 6,
-            fontFamily: "system-ui, sans-serif",
-          }}
-        >
-          RNG
-        </span>
       </div>
     ),
     { ...size }

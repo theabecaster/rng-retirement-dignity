@@ -13,11 +13,11 @@ export default function Footer() {
       className="relative overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, #0F2319 0%, #0A1A12 100%)",
+          "linear-gradient(180deg, #071428 0%, #050E1C 100%)",
       }}
     >
       {/* Top border accent */}
-      <div className="h-px bg-gradient-to-r from-transparent via-copper/20 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
@@ -28,12 +28,12 @@ export default function Footer() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5"
           >
-            <p className="font-newsreader text-xl text-white tracking-tight mb-2">
-              RNG{" "}
-              <span className="text-copper">Retirement</span>{" "}
-              Dignity
+            <p className="font-cormorant text-xl text-white tracking-tight mb-2">
+              Retirement{" "}
+              <span className="text-gold">Dignity</span>{" "}
+              Group
             </p>
-            <p className="font-outfit text-xs text-white/25 tracking-[0.25em] uppercase">
+            <p className="font-sora text-xs text-white/25 tracking-[0.25em] uppercase">
               Education · Clarity · Dignity
             </p>
           </motion.div>
@@ -59,7 +59,7 @@ export default function Footer() {
               <a
                 key={href}
                 href={href}
-                className="font-outfit text-[13px] text-white/30 hover:text-copper transition-colors duration-300"
+                className="font-sora text-[13px] text-white/30 hover:text-gold transition-colors duration-300"
               >
                 {label}
               </a>
@@ -79,7 +79,7 @@ export default function Footer() {
           >
             <a
               href="#hero"
-              className="group inline-flex items-center gap-2 font-outfit text-[13px] text-white/25 hover:text-copper transition-colors duration-300"
+              className="group inline-flex items-center gap-2 font-sora text-[13px] text-white/25 hover:text-gold transition-colors duration-300"
             >
               Back to top
               <svg
@@ -104,7 +104,7 @@ export default function Footer() {
 
         {/* Compliance & Legal */}
         <div className="space-y-4">
-          <p className="font-outfit text-[12px] text-white/20 leading-relaxed max-w-3xl">
+          <p className="font-sora text-[12px] text-white/20 leading-relaxed max-w-3xl">
             RNG Insurance Group is a licensed insurance entity. This website is
             for educational purposes only and does not constitute financial,
             legal, or insurance advice. Product availability and eligibility vary
@@ -112,9 +112,9 @@ export default function Footer() {
             financial or insurance decisions.
           </p>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <p className="font-outfit text-[11px] text-white/12">
+            <p className="font-sora text-[11px] text-white/12">
               &copy; {new Date().getFullYear()} RNG Insurance Group. All rights
-              reserved. Operating as RNG Retirement Dignity.
+              reserved. Operating as Retirement Dignity Group.
             </p>
           </div>
         </div>

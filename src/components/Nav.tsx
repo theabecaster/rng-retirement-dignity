@@ -21,7 +21,6 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -37,7 +36,7 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-parchment/95 backdrop-blur-md border-b border-forest/8"
+          ? "bg-white/95 backdrop-blur-md border-b border-navy/8 shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -45,16 +44,16 @@ export default function Nav() {
         <div className="flex items-center justify-between h-18">
           {/* Logo */}
           <a href="#" className="relative group">
-            <span className="font-newsreader text-lg tracking-tight">
-              <span className={`font-semibold transition-colors duration-500 ${scrolled ? "text-forest" : "text-white"}`}>
-                RNG
+            <span className="font-cormorant text-lg tracking-tight">
+              <span className={`font-bold transition-colors duration-500 ${scrolled ? "text-navy" : "text-white"}`}>
+                Retirement Dignity
               </span>
-              <span className={`transition-colors duration-500 ${scrolled ? "text-copper" : "text-copper-light"}`}>
-                {" "}Retirement Dignity
+              <span className={`font-semibold transition-colors duration-500 ${scrolled ? "text-gold" : "text-gold-light"}`}>
+                {" "}Group
               </span>
             </span>
             <span
-              className="absolute -bottom-1 left-0 h-px bg-copper transition-all duration-300 group-hover:w-full"
+              className="absolute -bottom-1 left-0 h-px bg-gold transition-all duration-300 group-hover:w-full"
               style={{ width: 0 }}
             />
           </a>
@@ -65,14 +64,14 @@ export default function Nav() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`relative text-[13px] font-outfit font-medium tracking-wide uppercase transition-colors duration-300 group ${
+                className={`relative text-[13px] font-sora font-medium tracking-wide uppercase transition-colors duration-300 group ${
                   scrolled
-                    ? "text-stone hover:text-forest"
+                    ? "text-slate hover:text-navy"
                     : "text-white/70 hover:text-white"
                 }`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-copper transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </nav>
@@ -87,17 +86,17 @@ export default function Nav() {
             <div className="relative w-5 h-4">
               <span
                 className={`absolute left-0 w-full h-px transition-all duration-300 ${
-                  scrolled ? "bg-forest" : "bg-white"
+                  scrolled ? "bg-navy" : "bg-white"
                 } ${menuOpen ? "top-1/2 rotate-45" : "top-0"}`}
               />
               <span
                 className={`absolute left-0 top-1/2 w-full h-px transition-all duration-300 ${
-                  scrolled ? "bg-forest" : "bg-white"
+                  scrolled ? "bg-navy" : "bg-white"
                 } ${menuOpen ? "opacity-0 translate-x-2" : "opacity-100"}`}
               />
               <span
                 className={`absolute left-0 w-full h-px transition-all duration-300 ${
-                  scrolled ? "bg-forest" : "bg-white"
+                  scrolled ? "bg-navy" : "bg-white"
                 } ${menuOpen ? "top-1/2 -rotate-45" : "top-full"}`}
               />
             </div>
@@ -113,7 +112,7 @@ export default function Nav() {
             animate={{ opacity: 1, height: "100dvh" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden fixed inset-0 top-18 bg-parchment overflow-hidden"
+            className="md:hidden fixed inset-0 top-18 bg-ivory overflow-hidden"
           >
             <div className="flex flex-col justify-center items-center h-full -mt-18 gap-2">
               {navLinks.map((link, i) => (
@@ -123,7 +122,7 @@ export default function Nav() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.06, duration: 0.4 }}
-                  className="font-newsreader text-3xl text-forest hover:text-copper transition-colors duration-300 py-3"
+                  className="font-cormorant text-3xl text-navy hover:text-gold transition-colors duration-300 py-3"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
@@ -133,13 +132,13 @@ export default function Nav() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
-                className="mt-8 w-12 h-px bg-copper"
+                className="mt-8 w-12 h-px bg-gold"
               />
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.4 }}
-                className="mt-4 font-outfit text-xs text-stone tracking-widest uppercase"
+                className="mt-4 font-sora text-xs text-slate tracking-widest uppercase"
               >
                 Education · Clarity · Dignity
               </motion.p>

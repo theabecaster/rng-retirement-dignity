@@ -44,21 +44,21 @@ function PillarCard({
       className="relative group"
     >
       {/* Left accent bar */}
-      <div className="absolute left-0 top-0 bottom-0 w-px bg-copper/25 group-hover:bg-copper/60 transition-colors duration-500" />
+      <div className="absolute left-0 top-0 bottom-0 w-px bg-gold/25 group-hover:bg-gold/60 transition-colors duration-500" />
 
       <div className="pl-8 py-2">
         {/* Number */}
-        <span className="font-outfit text-[11px] text-copper tracking-[0.3em] uppercase font-medium">
+        <span className="font-sora text-[11px] text-gold tracking-[0.3em] uppercase font-medium">
           {pillar.number}
         </span>
 
         {/* Title */}
-        <h3 className="font-newsreader text-2xl lg:text-[1.7rem] text-forest mt-3 mb-4 leading-snug">
+        <h3 className="font-cormorant text-2xl lg:text-[1.7rem] text-navy mt-3 mb-4 leading-snug">
           {pillar.title}
         </h3>
 
         {/* Body */}
-        <p className="font-outfit text-[15px] text-stone leading-relaxed">
+        <p className="font-sora text-[15px] text-slate leading-relaxed">
           {pillar.body}
         </p>
       </div>
@@ -71,9 +71,9 @@ export default function Mission() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="philosophy" className="py-28 lg:py-36 bg-parchment">
+    <section id="philosophy" className="py-28 lg:py-36 bg-ivory">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        {/* Section Header — editorial style */}
+        {/* Section Header */}
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 mb-20">
           <motion.div
             ref={ref}
@@ -82,13 +82,13 @@ export default function Mission() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5"
           >
-            <p className="font-outfit text-[11px] text-copper tracking-[0.3em] uppercase font-medium mb-5">
+            <p className="font-sora text-[11px] text-gold tracking-[0.3em] uppercase font-medium mb-5">
               02 — Our Philosophy
             </p>
-            <h2 className="font-newsreader text-4xl lg:text-5xl text-forest leading-tight">
+            <h2 className="font-cormorant text-4xl lg:text-5xl text-navy leading-tight">
               Education First.
               <br />
-              <em className="text-copper">Always.</em>
+              <em className="text-gold">Always.</em>
             </h2>
           </motion.div>
 
@@ -98,7 +98,7 @@ export default function Mission() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-7 flex items-end"
           >
-            <p className="font-outfit text-base lg:text-lg text-stone leading-relaxed max-w-xl">
+            <p className="font-sora text-base lg:text-lg text-slate leading-relaxed max-w-xl">
               We work with people who are often underserved and undereducated when
               it comes to retirement, healthcare, and financial planning. Our goal
               is to empower you with clarity and understanding — and only then,
@@ -112,7 +112,7 @@ export default function Mission() {
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full h-px bg-forest/10 origin-left mb-16"
+          className="w-full h-px bg-navy/10 origin-left mb-16"
         />
 
         {/* Pillar Cards */}

@@ -56,23 +56,23 @@ function TopicCard({
         delay: (index % 3) * 0.12,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative bg-parchment/60 backdrop-blur-sm border border-forest/8 p-8 lg:p-10 hover:border-copper/30 transition-all duration-500"
+      className="group relative bg-white/5 backdrop-blur-sm border border-white/8 p-8 lg:p-10 hover:border-gold/30 transition-all duration-500"
     >
       {/* Number */}
-      <span className="font-outfit text-[11px] text-sage tracking-[0.3em] uppercase font-medium">
+      <span className="font-sora text-[11px] text-slate-light tracking-[0.3em] uppercase font-medium">
         {topic.number}
       </span>
 
       {/* Title */}
-      <h3 className="font-newsreader text-xl lg:text-2xl text-white mt-4 mb-4 leading-snug group-hover:text-copper-light transition-colors duration-500">
+      <h3 className="font-cormorant text-xl lg:text-2xl text-white mt-4 mb-4 leading-snug group-hover:text-gold-light transition-colors duration-500">
         {topic.title}
       </h3>
 
-      {/* Copper line */}
-      <div className="w-8 h-px bg-copper/40 mb-4 group-hover:w-12 transition-all duration-500" />
+      {/* Gold line */}
+      <div className="w-8 h-px bg-gold/40 mb-4 group-hover:w-12 transition-all duration-500" />
 
       {/* Body */}
-      <p className="font-outfit text-[14px] text-white/50 leading-relaxed group-hover:text-white/65 transition-colors duration-500">
+      <p className="font-sora text-[14px] text-white/45 leading-relaxed group-hover:text-white/65 transition-colors duration-500">
         {topic.body}
       </p>
     </motion.div>
@@ -89,15 +89,15 @@ export default function Topics() {
       className="py-28 lg:py-36 relative overflow-hidden"
       style={{
         background:
-          "linear-gradient(175deg, #1C3829 0%, #0F2319 50%, #162E22 100%)",
+          "linear-gradient(175deg, #0C1F3F 0%, #071428 50%, #0F2545 100%)",
       }}
     >
-      {/* Subtle texture */}
+      {/* Subtle grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(90deg, transparent, transparent 80px, #F4EDE4 80px, #F4EDE4 81px), repeating-linear-gradient(0deg, transparent, transparent 80px, #F4EDE4 80px, #F4EDE4 81px)",
+            "repeating-linear-gradient(90deg, transparent, transparent 80px, #C9A84C 80px, #C9A84C 81px), repeating-linear-gradient(0deg, transparent, transparent 80px, #C9A84C 80px, #C9A84C 81px)",
         }}
       />
 
@@ -111,13 +111,13 @@ export default function Topics() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-6"
           >
-            <p className="font-outfit text-[11px] text-copper tracking-[0.3em] uppercase font-medium mb-5">
+            <p className="font-sora text-[11px] text-gold tracking-[0.3em] uppercase font-medium mb-5">
               03 — What We Cover
             </p>
-            <h2 className="font-newsreader text-4xl lg:text-5xl text-white leading-tight">
+            <h2 className="font-cormorant text-4xl lg:text-5xl text-white leading-tight">
               Topics We Help
               <br />
-              You <em className="text-copper-light">Understand</em>
+              You <em className="text-gold-light">Understand</em>
             </h2>
           </motion.div>
 
@@ -131,7 +131,7 @@ export default function Topics() {
             }}
             className="lg:col-span-6 flex items-end"
           >
-            <p className="font-outfit text-base text-white/45 leading-relaxed max-w-lg">
+            <p className="font-sora text-base text-white/40 leading-relaxed max-w-lg">
               These are the areas where people most often feel lost, misled, or
               unprepared. We bring clarity to all of them — without jargon,
               without pressure.
